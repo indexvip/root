@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .tab{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .th{width: 300px;}
+    .rows{
+      width: 300px;
+      height: 150px;
+      /* border: 1px solid black; */
+      overflow-y:scroll;/*超出容器隐藏*/
+    }
+    .col{
+      display:table-cell;/*设置具有表格属性*/
+      width: 80px;
+      word-break: break-all;/*允许拆分内容*/
+      white-space:normal;/*内容超出容器换行*/
+      padding: 5px;
+      text-align: center;/*内容水平居中*/
+      vertical-align: middle;/*内容垂直居中*/
+    }
+  </style>
+</head>
+<body>
+  <div class="tab">
+      <div class="th">
+        <div class="col">标题1</div>
+        <div class="col">标题2</div>
+      </div>
+    <div id="rows" class="rows">
+        <div class="row">
+          <div class="col">12tgh感染浩特按合同和爱护特eathteh3</div>
+          <div class="col">456</div>
+        </div>
+        <div class="row">
+          <div class="col">123</div>
+          <div class="col">456</div>
+        </div>
+        <div class="row">
+          <div class="col">12tgh感染浩特按合同和爱护特eathteh3</div>
+          <div class="col">456</div>
+        </div>
+        <div class="row">
+          <div class="col">123</div>
+          <div class="col">456</div>
+        </div>
+        <div class="row">
+          <div class="col">12tgh感染浩特按合同和爱护特eathteh3</div>
+          <div class="col">456</div>
+        </div>
+        <div class="row">
+          <div class="col">123</div>
+          <div class="col">456</div>
+        </div>
+    </div>
+  </div>
+<script>
+      var y=document.getElementById("rows");
+      setInterval(function() {
+        if(y.scrollTop<y.scrollHeight-150){
+          y.scrollTop++;
+        }else{
+          y.scrollTop=0;
+        }
+      },100)
+</script>
+
+  <input type="text" list="leim">
+  <datalist id="leim">
+    <option value="123">fes</option>
+    <option value="456">gew</option>
+  </datalist>
+</body>
+</html>
